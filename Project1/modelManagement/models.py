@@ -15,7 +15,7 @@ class PartitPolitic(models.Model):
   ideology = models.CharField(max_length=255)
   description = models.TextField()
 
-class Reunion(models.Model):
+class Reunio(models.Model):
   date = models.DateField()
   hours = models.IntegerField()
   ubication = models.CharField(max_length=255)
