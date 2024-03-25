@@ -20,6 +20,7 @@ from modelManagement import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views.test),
-
+    path('politics/', views.politics),
+    path('partits/', views.partit_politic),
+    path('reunions/', views.reunio),
 ]
