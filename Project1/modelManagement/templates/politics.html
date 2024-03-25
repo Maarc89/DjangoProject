@@ -1,15 +1,6 @@
-{% extends "base.html" %}
-
-{% block title %}
-  List of all members
-{% endblock %}
-
-{% block content %}
-  <h1>Members</h1>
-
-  <ul>
-    {% for x in mymembers %}
-      <li>{{ x.firstname }} {{ x.lastname }}</li>
+<h1>Llistat de Polítics</h1>
+<ul>
+    {% for politic in politics %}
+        <li>{{ politic.firstname }}</li>
     {% endfor %}
-  </ul>
-{% endblock %}
+</ul>
