@@ -1,6 +1,12 @@
-<h1>Llistat de Polítics</h1>
+<!-- templates/politics/list.html -->
+<h1>Listat de Polítics</h1>
 <ul>
     {% for politic in politics %}
-        <li>{{ politic.firstname }}</li>
+        <li>
+            <strong>Nom:</strong> {{ politic.firstname }} {{ politic.lastname }}<br>
+            <strong>Càrrec:</strong> {{ politic.carrec }}<br>
+            <strong>Partit:</strong> {{ politic.partit }}<br>
+            <strong>Descripció:</strong> {{ politic.description }}<br>
+        </li>
     {% endfor %}
 </ul>
