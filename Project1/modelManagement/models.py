@@ -6,6 +6,7 @@ class Politic(models.Model):
   carrec = models.CharField(max_length=255, null=True)
   partit = models.CharField(max_length=255, null=True)
   description = models.TextField(null=True)
+#foto = models.ImageField(upload_to='images/',null=True)
 
   def __str__(self):
     return f"{self.firstname} {self.lastname}"

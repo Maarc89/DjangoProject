@@ -1,12 +1,30 @@
-<!-- templates/politics/list.html -->
-<h1>Listat de Polítics</h1>
-<ul>
-    {% for politic in politics %}
-        <li>
-            <strong>Nom:</strong> {{ politic.firstname }} {{ politic.lastname }}<br>
-            <strong>Càrrec:</strong> {{ politic.carrec }}<br>
-            <strong>Partit:</strong> {{ politic.partit }}<br>
-            <strong>Descripció:</strong> {{ politic.description }}<br>
-        </li>
-    {% endfor %}
-</ul>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Políticos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/politicStyle.css' %}">
+</head>
+<body>
+    <h1>Listado de Políticos</h1>
+    <ul class="politics-list">
+        {% for politic in politics %}
+            <li class="politician">
+                <div class="politician-info">
+                    <h2>{{ politic.firstname }} {{ politic.lastname }}</h2>
+                    <p><strong>Cargo:</strong> {{ politic.carrec }}</p>
+                    <p><strong>Partido:</strong> {{ politic.partit }}</p>
+                    <p><strong>Descripción:</strong> {{ politic.description }}</p>
+                </div>
+               <!-- <div class="politician-photo">
+                    <img src="{{ politic.foto.url}}" alt="Foto de {{ politic.firstname }} {{ politic.lastname }}"
+                </div> -->
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

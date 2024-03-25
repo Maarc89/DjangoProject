@@ -1,0 +1,50 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Blanco */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #008000; /* Verde */
+}
+
+.politics-list {
+    list-style: none;
+    padding: 0;
+}
+
+.politician {
+    background-color: #ffffff; /* Blanco */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agregar transición suave */
+}
+
+.politician:hover {
+    background-color: #1717FF; /* Cambiar color al pasar el cursor */
+    transform: scale(1.05); /* Agrandar ligeramente al pasar el cursor */
+}
+
+.politician-info {
+    flex: 1;
+}
+
+.politician-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
