@@ -1,0 +1,9 @@
+/* Estilos para justificar el texto */
+.column p {
+    text-align: justify;
+}
+
+/* Estilos para centrar el texto */
+.column h2 {
+    text-align: center;
+}
