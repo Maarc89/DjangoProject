@@ -1,50 +1,37 @@
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Blanco */
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #008000; /* Verde */
-}
-
+/* Estils per el llistat de polítics */
 .politics-list {
     list-style: none;
     padding: 0;
+    max-width: 600px;
+    margin: auto;
 }
 
 .politician {
-    background-color: #ffffff; /* Blanco */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Agregar transición suave */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    background-color: #CCCCCC; /* Fons gris clar */
+    padding: 10px;
+    border-radius: 5px; /* Bordes rodons */
 }
 
 .politician:hover {
-    background-color: #aaf0d1; /* Cambiar color al pasar el cursor */
-    transform: scale(1.05); /* Agrandar ligeramente al pasar el cursor */
+    transform: scale(1.05); /* Agrandar al passar el cursor */
 }
 
 .politician-info {
     flex: 1;
 }
 
+
 .politician-photo img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 5px;
+    transition: filter 0.3s;
+    max-height: 300px;
+}
+
+.politician:hover .politician-photo img {
+    filter: grayscale(0%) brightness(120%);
 }

@@ -1,100 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
-    <style>
-        /* Estilos del menú de navegación */
-        nav {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-        }
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex; /* Alinear */
-        }
 
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #00ff00; /* Verd al passar el cursor */
-        }
-
-        .selected {
-            font-weight: bold; /* Text en negreta per l'opció seleccionada */
-        }
-
-        /* Estilos para las secciones */
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* Altura del viewport */
-        }
-
-        .row {
-            display: flex;
-            flex: 1; /* Ocupa todo el espacio disponible */
-        }
-
-        .column {
-            flex: 1; /* Ocupa todo el espacio disponible */
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Ajustar estilos de las imágenes y el texto según sea necesario */
-        .column img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .column p {
-            text-align: center;
-        }
-
-        .section1, .section3 {
-            background-color: #CCCCCC; /* Fondo gris claro */
-        }
-
-        .section2 {
-            background-color: #ffffff; /* Fondo blanco */
-        }
-    </style>
-</head>
-<body>
-    <!-- Barra de navegación -->
-    <nav>
-        <ul>
-            <li><a href="{% url 'index' %}" class="{% if request.path == '/' %}selected{% endif %}">Inici</a></li>
-            <li><a href="{% url 'partit_politic' %}">Partits Polítics</a></li>
-            <li><a href="{% url 'reunio' %}">Reunions</a></li>
-            <li><a href="{% url 'politics' %}" class="{% if request.path == '/politics/' %}selected{% endif %}">Polítics</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contenido de la página de inicio -->
-    <div class="container">
-        <!-- Primera sección -->
+    <div class="container mt-3">
         <div class="row section1">
             <div class="column">
-                <!-- <img src="ruta/a/tu/logo.jpg" alt="Logo"> -->
-                <h2>Foto logo</h2>
+                <img src={% static 'images/Logo.jpg' %} alt="Logo">
+                <h2>PoliticNow</h2>
             </div>
             <div class="column">
                 <p>PoliticNow fou una idea generada per 3 emprenedors Joves
@@ -102,28 +15,23 @@
                     Va ser fundada per Adrià Creus, Marc Ferreres i Juan Carlos Turégano el 2024</p>
             </div>
         </div>
-
-        <!-- Segunda sección -->
         <div class="row section2">
             <div class="column">
-                <p>Descobreix quins són els nostres representants actuals en el país Espanyol i quins són els partits que representen a la ciutadania</p>
+                <p>Descobreix quins són els nostres representants actuals en el país Espanyol i quins són els partits
+                    que representen a la ciutadania</p>
             </div>
             <div class="column">
-                <!-- <img src="ruta/a/tu/foto.jpg" alt="Foto">  -->
-                <h2>foto de politics</h2>
+                <img src="{% static 'images/presis.jpg' %}" alt="Foto">
             </div>
         </div>
-
-        <!-- Tercera sección -->
         <div class="row section3">
             <div class="column">
-                <!-- <img src="ruta/a/tu/foto.jpg" alt="Foto"> -->
-                <h2>foto de reunions</h2>
+                <img src="{% static 'images/reunio.jpg' %}" alt="Foto">
             </div>
             <div class="column">
-                <p>Estiguis al dia de totes les reunions i esdeveniments que poden marcar una diferencia en l'actualitat política espanyola </p>
+                <p>Estiguis al dia de totes les reunions i esdeveniments que poden marcar una diferencia en l'actualitat
+                    política espanyola </p>
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
