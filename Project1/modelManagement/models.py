@@ -15,9 +15,13 @@ class PartitPolitic(models.Model):
   name = models.CharField(max_length=255)
   leader = models.CharField(max_length=255)
   ideology = models.CharField(max_length=255)
-  description = models.TextField()
+  members = models.CharField(max_length=255, null=True)
+  description = models.TextField(null=True)
+
 
 class Reunio(models.Model):
   date = models.DateField()
   hours = models.IntegerField()
   ubication = models.CharField(max_length=255)
+  members = models.CharField(max_length=255, null=True)
+  description = models.TextField(null=True)
