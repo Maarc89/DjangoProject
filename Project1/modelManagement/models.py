@@ -20,8 +20,12 @@ class PartitPolitic(models.Model):
 
 
 class Reunio(models.Model):
-  date = models.DateField()
-  hours = models.IntegerField()
+  subject = models.CharField(max_length=255, null=True)
+  date = models.DateTimeField(null=True)
   ubication = models.CharField(max_length=255)
   members = models.CharField(max_length=255, null=True)
   description = models.TextField(null=True)
+  #politic = models.ForeignKey(Politic, on_delete=models.CASCADE, null=True)
+
+  def __str__(self):
+    return self.subject

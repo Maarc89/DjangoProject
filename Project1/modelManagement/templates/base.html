@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../static/images/cup-hot-fill.svg">
+    <link rel="icon" type="image/x-icon" href="../static/images/buildings.svg">
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}">
@@ -21,10 +21,9 @@
 <nav>
     <ul>
         <li><a href="{% url 'index' %}" class="{% if request.path == '/' %}selected{% endif %}">Inici</a></li>
-        <li><a href="{% url 'partit_politic' %}">Partits Polítics</a></li>
-        <li><a href="{% url 'reunio' %}">Reunions</a></li>
-        <li><a href="{% url 'politics' %}" class="{% if request.path == '/politics/' %}selected{% endif %}">Polítics</a>
-        </li>
+        <li><a href="{% url 'partit_politic' %}" class="{% if request.path == '/partits/' %}selected{% endif %}">Partits Polítics</a></li>
+        <li><a href="{% url 'reunio' %}" class="{% if request.path == '/reunions/' %}selected{% endif %}">Reunions</a></li>
+        <li><a href="{% url 'politics' %}" class="{% if request.path == '/politics/' %}selected{% endif %}">Polítics</a></li>
     </ul>
 </nav>
 {% block content %}
