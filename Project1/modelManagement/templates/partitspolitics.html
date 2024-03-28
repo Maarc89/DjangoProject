@@ -2,7 +2,25 @@
 {% load static %}
 {% block content %}
 
-<!-- Aqui va el codi html -->
+<h1>Llistat de Partíts Polítics</h1>
+<div class="politic-party-container mt-4">
+    {% for partit in partits_politics %}
+    <div class="politic-party-card">
+        <div class="front">
+            <div class="politic-party-leader">
+                <h2>Partido:{{ partit.name }}</h2>
+                <p><strong>Lider:</strong> {{ partit.leader }}</p>
+            </div>
+        </div>
+        <div class="back">
+            <div class="politic-party-information">
+                <p><strong>Ideologia:</strong> {{ partit.ideology }}</p>
+                <p><strong>Miembros:</strong> {{ partit.members }}</p>
+                <p><strong>Descripció:</strong> {{ partit.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
-
