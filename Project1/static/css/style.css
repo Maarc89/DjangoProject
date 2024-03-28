@@ -118,11 +118,11 @@ nav ul li a:hover {
 
 /* Estils per reunions */
 .meetings-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-left: 20px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 20px;
+}
 
 .meeting-card {
     background-color: #CCCCCC;
@@ -155,4 +155,60 @@ nav ul li a:hover {
 
 .meeting-details p strong {
     font-weight: bold;
+}
+
+/* Estils per PartitsPolitics */
+
+.politic-party-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.politic-party-card {
+    position: relative;
+    width: 400px; /* Ancho mayor para la tarjeta */
+    height: 300px; /* Altura mayor para la tarjeta */
+    background-color: #cccccc; /* Color de fondo */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.politic-party-card:hover {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column; /* Para apilar el contenido verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.politic-party-leader,
+.politic-party-information {
+    padding: 20px;
+    text-align: center;
+}
+
+.politic-party-information {
+    margin-top: 20px; /* Espacio entre el líder y la información adicional */
 }
